@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard | MateVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Dashboard styles -->
+  <style>
+    .dashboard-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #14122a;
+      border-radius: 18px;
+      box-shadow: 0 0 35px rgba(127, 92, 255, 0.35);
+      color: white;
+    }
+
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .dashboard-header h2 {
+      color: #7f5cff;
+      margin: 0;
+    }
+
+    .nav-links a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #00f2fe;
+      font-weight: bold;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: #1f1b3a;
+      padding: 20px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(127, 92, 255, 0.4);
+    }
+
+    .card h3 {
+      margin: 0;
+      color: #7f5cff;
+      font-size: 22px;
+    }
+
+    .card p {
+      margin: 8px 0 0;
+      opacity: 0.85;
+    }
+
+    .actions {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    #dashboardStatus {
+      margin-top: 15px;
+      color: #00f2fe;
+      font-size: 15px;
+    }
+
+    .btn {
+      padding: 12px 26px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #7f5cff, #00f2fe);
+      border: none;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+      margin: 8px;
+    }
+
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="dashboard-container">
+
+    <!-- Header -->
+    <div class="dashboard-header">
+      <h2>♟ MateVerse Dashboard</h2>
+      <div class="nav-links">
+        <a href="profile.html">Profile</a>
+        <a href="#">Leaderboard</a>
+        <a href="#">Tournaments</a>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="card">
+        <h3>1420</h3>
+        <p>ELO Rating</p>
+      </div>
+      <div class="card">
+        <h3>256</h3>
+        <p>Matches Played</p>
+      </div>
+      <div class="card">
+        <h3>#512</h3>
+        <p>Global Rank</p>
+      </div>
+      <div class="card">
+        <h3>52%</h3>
+        <p>Win Rate</p>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="findMatchBtn" class="btn">🔍 Find Match</button>
+      <p id="dashboardStatus"></p>
+    </div>
+
+  </div>
+
+  <!-- Socket.IO -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Dashboard Logic -->
+  <script src="js/dashboard.js"></script>
+
+</body>
+</html>

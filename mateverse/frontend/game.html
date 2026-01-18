@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Game Room | MateVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/game.css">
+
+  <!-- Chessboard CSS -->
+  <link rel="stylesheet"
+    href="https://unpkg.com/chessboardjs/www/css/chessboard.css"
+  />
+</head>
+
+<body>
+
+  <div class="game-container">
+    <h2>♟ Live Match</h2>
+
+    <div class="game-layout">
+      <!-- Chess Board -->
+      <div id="board" style="width: 400px;"></div>
+
+      <!-- Side Panel -->
+      <div class="side-panel">
+        <div class="player">
+          <span>White</span>
+          <strong>You</strong>
+          <div class="timer">10:00</div>
+        </div>
+
+        <div class="player">
+          <span>Black</span>
+          <strong>Opponent</strong>
+          <div class="timer">10:00</div>
+        </div>
+
+        <p id="status">Waiting for opponent...</p>
+
+        <button class="game-btn">Resign</button>
+        <button class="game-btn">Offer Draw</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Socket.IO -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Chess logic -->
+  <script src="https://unpkg.com/chess.js/chess.js"></script>
+  <script src="https://unpkg.com/chessboardjs/www/js/chessboard.js"></script>
+
+  <!-- Game Logic -->
+  <script src="js/game.js"></script>
+
+</body>
+</html>

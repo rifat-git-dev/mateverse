@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Player Profile | MateVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Profile specific styles -->
+  <style>
+    .profile-container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #1f1b3a;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 0 30px rgba(127, 92, 255, 0.3);
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7f5cff, #00f2fe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .player-info h2 {
+      margin: 0;
+    }
+
+    .elo {
+      color: #7f5cff;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .badges {
+      margin-top: 25px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      margin: 6px;
+      background: #302b63;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .stat-card {
+      background: #302b63;
+      padding: 18px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .stat-card h3 {
+      margin: 0;
+      color: #7f5cff;
+    }
+
+    .back-btn {
+      margin-top: 30px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-container">
+
+    <!-- Header -->
+    <div class="profile-header">
+      <div class="avatar">M</div>
+      <div class="player-info">
+        <h2>MateVerse Player</h2>
+        <div class="elo">ELO Rating: 1420</div>
+        <p>Global Rank: #512</p>
+      </div>
+    </div>
+
+    <!-- Badges -->
+    <div class="badges">
+      <h3>🏆 Achievements</h3>
+      <span class="badge">Blitz Master</span>
+      <span class="badge">100 Wins</span>
+      <span class="badge">Tournament Finalist</span>
+      <span class="badge">Fair Play ⭐</span>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat-card">
+        <h3>256</h3>
+        <p>Matches Played</p>
+      </div>
+      <div class="stat-card">
+        <h3>148</h3>
+        <p>Wins</p>
+      </div>
+      <div class="stat-card">
+        <h3>52%</h3>
+        <p>Win Rate</p>
+      </div>
+      <div class="stat-card">
+        <h3>34</h3>
+        <p>Tournaments</p>
+      </div>
+    </div>
+
+    <!-- Back -->
+    <a href="dashboard.html" class="btn back-btn">⬅ Back to Dashboard</a>
+
+  </div>
+
+</body>
+</html>

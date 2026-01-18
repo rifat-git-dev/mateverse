@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle, #0f0c29, #302b63);
+  color: white;
+  text-align: center;
+}
+
+.btn {
+  padding: 12px 25px;
+  background: #7f5cff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
